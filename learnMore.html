@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth - Learn More</title>
+    <style>
+      /* Global Styles */
+      body {
+        background-color: #dff2fe;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      /* Navigation Bar */
+      header {
+        background-color: #99c7f4;
+        padding: 15px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .login-signup {
+        background-color: #70b7ed;
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+
+      .login-signup:hover {
+        background-color: #1a8bbf;
+      }
+
+      /* Header Section */
+      .header-content {
+        text-align: center;
+        padding: 30px;
+        background-color: #dff2fe;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #033141;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        color: #033141;
+        margin-top: 10px;
+      }
+
+      .learn-more h3 {
+        margin: 20px 0;
+        font-size: 1.2em;
+      }
+
+      /* Dropdown Section */
+      .dropdown {
+        display: inline-block;
+        position: relative;
+      }
+
+      #dropdownButton {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 15px 10px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      #goButton {
+        background-color: #314e89;
+        color: white;
+        padding: 8px 15px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #dropdownContent {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      #dropdownContent a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+
+      #dropdownContent a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Content Section */
+      .content {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        background-color: #f0f8f8;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        width: 20%;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card h3 {
+        color: #314e89;
+      }
+
+      .card p {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      footer {
+  background-color: #3f6d9c; 
+  color: white; 
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.footer-container h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.footer-container p {
+  margin: 10px 0;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <ul>
+            <li><a href="index.html">Get Started</a></li>
+            <li><a href="learnMore.html">Learn More</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li class="logo">UniHealth</li>
+            <li><a href="blog.html">Blogs</a></li> 
+            <li><a href="referral.html">Refer a Patient</a></li>
+            <li><a href="loginpage.html" class="login-signup">Login/Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Header Content -->
+    <section class="header-content">
+      <h1>UniHealth</h1>
+      <h2>Find peace of mind, no matter the challenge. Explore how we can help you heal.</h2>
+      <div class="learn-more">
+        <h3>Learn More about Conditions we Treat</h3>
+        <div class="dropdown">
+          <button id="dropdownButton">I would like to learn about...<span class="arrow">▼</span></button>
+          <div id="dropdownContent" class="dropdown-content">
+            <a href="#" data-info="depression">Depression</a>
+            <a href="#" data-info="anxiety">Anxiety</a>
+            <a href="#" data-info="stress">Stress</a>
+            <a href="#" data-info="grief">Grief</a>
+            <a href="#" data-info="relationships">Relationships</a>
+            <a href="#" data-info="trauma">Trauma</a>
+          </div>
+          <button id="goButton">Go</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Content Section -->
+    <div class="content">
+      
+      <div class="card" id="ADHD">
+        <h3>ADHD</h3>
+        <p>People with ADHD often struggle with staying focused, feeling restless, and may act impulsively without thinking things through.</p>
+      </div>
+      
+      <div class="card" id="ASD">
+        <h3>Acute Stress Disorder</h3>
+        <p>Acute Stress Disorder can cause distressing symptoms such as flashbacks, nightmares, and recurring thoughts related to traumatic experiences.</p>
+      </div>
+      
+      
+      <div class="card" id="depression">
+        <h3>Depression</h3>
+        <p>Depression typically presents as prolonged sadness, a loss of interest in once-enjoyed activities, and other emotional challenges.</p>
+      </div>
+      
+      
+      <div class="card" id="PTSD">
+        <h3>Post-Traumatic Stress Disorder (PTSD)</h3>
+        <p>PTSD can develop after exposure to traumatic events and may lead to intense fear, avoidance, and hypervigilance, disrupting daily life.</p>
+      </div>
+      
+      
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+          <h3>Get in Touch</h3>
+          <p>We'd love to hear from you! Reach out to us for any inquiries.</p>
+          <div class="contact-info">
+            <p><img src="gmail.png" alt="Email" /> nija@example.com</p>
+            <p><img src="phone-call.png" alt="Phone" /> +977 987654327, 014023455</p>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+      const dropdownButton = document.getElementById('dropdownButton');
+      const dropdownContent = document.getElementById('dropdownContent');
+      const goButton = document.getElementById('goButton');
+
+      dropdownButton.addEventListener('click', function() {
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
+
+      goButton.addEventListener('click', function() {
+        const selectedOption = dropdownContent.querySelector('a.selected');
+        if (selectedOption) {
+          alert(`You selected: ${selectedOption.dataset.info}`);
+        } else {
+          alert('Please select an option from the dropdown.');
+        }
+      });
+
+      dropdownContent.querySelectorAll('a').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          dropdownContent.querySelectorAll('a').forEach(link => link.classList.remove('selected'));
+          e.target.classList.add('selected');
+          dropdownButton.textContent = e.target.textContent + ' ▼';
+          dropdownContent.style.display = 'none';
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth - FAQ</title>
+    <style>
+      body {
+        background-color: #b8d5e8; 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh; 
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: #99c7f4; 
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav a {
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .faq-container {
+        text-align: center;
+        padding: 20px; 
+        background-color: #dff2fe;
+        flex-grow: 1; 
+      }
+
+      .faq-container h1 {
+        color: #333;
+      }
+
+      .faq-section {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .faq {
+        background-color: #ffffff; 
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .faq-question p {
+        margin: 0;
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      .arrow {
+        font-size: 1.2em;
+        color: #1a8bbf;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-answer {
+        display: none;
+        padding-top: 10px;
+        color: #333;
+        font-size: 0.95em;
+      }
+
+      .active .arrow {
+        transform: rotate(180deg);
+      }
+
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .login-signup {
+        background-color: #70b7ed; 
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+
+      .login-signup:hover {
+        background-color: #1a8bbf; 
+      }
+
+      footer {
+  background-color: #3f6d9c; 
+  color: white; 
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.footer-container h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.footer-container p {
+  margin: 10px 0;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Get Started</a></li>
+          <li><a href="learnMore.html">Learn More</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li class="logo">UniHealth</li>
+          <li><a href="blog.html">Blogs</a></li> 
+          <li><a href="referral.html">Refer a Patient</a></li>
+          <li><a href="loginpage.html" class="login-signup">Login/Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="faq-container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Get answers to your questions</p>
+      <div class="faq-section">
+        <div class="faq">
+          <div class="faq-question">
+            <p>What are the symptoms of depression?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              A depressive episode is different from regular mood fluctuations. They last most of the day, nearly every day, for at least two weeks. Other symptoms are also present, which may include:
+              poor concentration, feelings of excessive guilt or low self-worth, hopelessness about the future, thoughts about dying or suicide, disrupted sleep, changes in appetite or weight, feeling very tired or low in energy
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <p>How to reduce stress?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Reducing stress is different for each and everyone. One solution cannot be the solution for everyobe. So, some of the ways are:
+              <p>1. Get more Physical activities</p>
+              <p>2. Eat a balanced disrupted </p>
+              <p>3. Practice self-care </p>
+              <p>4. Try journaling</p>
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <p>What should I do if I'm having a panic attack?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>During a panic attack, focus on slow, deep breathing, remind yourself that it's temporary, and use grounding techniques like feeling an object to stay present. If panic attacks are frequent, consider seeking professional help.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <p>Does exercise really improve mental health?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, regular physical activity can reduce symptoms of anxiety and depression by releasing endorphins and improving sleep. Even moderate exercise like walking can have positive mental health effects.
+            </p>
+          </div>
+        </div>
+          <div class="faq">
+            <div class="faq-question">
+              <p>How can I tell if I or someone I know is experiencing a mental health issue?</p>
+              <span class="arrow">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+              <p>You can recognize a mental health issue if there's a consistent change in mood, behavior, or thinking, such as persistent sadness, anxiety, or withdrawal from activities. If these changes affect daily life or cause distress, it’s important to seek professional help.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <h3>Get in Touch</h3>
+        <p>We'd love to hear from you! Reach out to us for any inquiries.</p>
+        <div class="contact-info">
+          <p><img src="gmail.png" alt="Email" /> nija@example.com</p>
+          <p><img src="phone-call.png" alt="Phone" /> +977 987654327, 014023455</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const answer = item.nextElementSibling;
+          const arrow = item.querySelector(".arrow");
+
+          
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
+
+          
+          arrow.classList.toggle("active");
+        });
+      });
+ 
+      
+    </script>
+  </body>
+</html>
+

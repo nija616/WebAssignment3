@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth - Sign Up</title>
+    <style>
+      body {
+        background-color: #b0d8f1;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .signup-container {
+        background-color: #c4dcf5;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 350px;
+      }
+
+      .signup-container h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .signup-container p {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      form input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        font-size: 1em;
+      }
+
+      form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #70b7ed;
+        color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      form button:hover {
+        background-color: #1a8bbf;
+      }
+
+      .redirect-text {
+        margin-top: 15px;
+      }
+
+      .redirect-text a {
+        color: #3896da;
+        text-decoration: none;
+      }
+
+      .redirect-text a:hover {
+        text-decoration: underline;
+      }
+
+      .error {
+        display: none;
+        color: red;
+        font-size: 0.9em;
+        text-align: left;
+        margin-top: -10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>UniHealth</h2>
+      <p>Welcome to UniHealth!</p>
+      <form id="signupForm" action="#" method="post">
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter your Username"
+          required
+        />
+        <span class="error" id="usernameError">Username is required</span>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <span class="error" id="emailError">Enter a valid email</span>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+        <span class="error" id="passwordError"
+          >Password must be at least 6 characters</span
+        >
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          required
+        />
+        <span class="error" id="confirmPasswordError"
+          >Passwords must match</span
+        >
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="redirect-text">
+        Already Registered? <a href="loginpage.html">SignIn</a>
+      </p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        clearErrors();
+      });
+
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let username = document.getElementById("username").value;
+          let email = document.getElementById("email").value;
+          let password = document.getElementById("password").value;
+          let confirmPassword =
+            document.getElementById("confirmPassword").value;
+          let isValid = true;
+
+          clearErrors();
+
+          if (username === "") {
+            showError("username", "Username is required");
+            isValid = false;
+          }
+
+          if (email === "") {
+            showError("email", "Email is required");
+            isValid = false;
+          } else if (!isValidEmail(email)) {
+            showError("email", "Enter a valid email");
+            isValid = false;
+          }
+
+          if (password === "") {
+            showError("password", "Password is required");
+            isValid = false;
+          } else if (password.length < 6) {
+            showError("password", "Password must be at least 6 characters");
+            isValid = false;
+          }
+
+          if (confirmPassword === "") {
+            showError("confirmPassword", "Confirm password is required");
+            isValid = false;
+          } else if (password !== confirmPassword) {
+            showError("confirmPassword", "Passwords must match");
+            isValid = false;
+          }
+
+          if (isValid) {
+            alert("Form Submitted Successfully");
+            // Redirect to homepage
+            window.location.href = "index.html";
+          }
+        });
+
+      function clearErrors() {
+        document.querySelectorAll(".error").forEach(function (element) {
+          element.style.display = "none";
+        });
+      }
+
+      function showError(id, message) {
+        const errorElement = document.getElementById(id + "Error");
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+      }
+
+      function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+    </script>
+  </body>
+</html>
